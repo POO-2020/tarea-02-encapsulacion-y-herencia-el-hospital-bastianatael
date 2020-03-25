@@ -8,7 +8,7 @@ export default class Fecha{
      */
     
     constructor(fecha){
-        this._fechas = fecha
+        this._fecha = fecha
 
         this._diasSemana = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"]
 
@@ -17,7 +17,7 @@ export default class Fecha{
     }
     getAños(){
         let añosTranscurridos 
-        añosTranscurridos = 2020 - this._fechas.getFullYear() 
+        añosTranscurridos = 2020 - this._fecha.getFullYear() 
         glob = añosTranscurridos
         return `${añosTranscurridos}`
     }
@@ -41,12 +41,12 @@ export default class Fecha{
     }
     getFecha(){
         let mesDelAño
-        mesDelAño = this._años[this._fechas.getMonth()]
-        return `${this._fechas.getDate()}/${mesDelAño}/${this._fechas.getFullYear()}`
+        mesDelAño = this._años[this._fecha.getMonth()]
+        return `${this._fecha.getDate()}/${mesDelAño}/${this._fecha.getFullYear()}`
     }
     getDiaFecha(){
         let diaDeSemana
-        diaDeSemana = this._diasSemana[this._fechas.getDay()]
+        diaDeSemana = this._diasSemana[this._fecha.getDay()]
         return `${diaDeSemana}`
     }
 }

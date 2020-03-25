@@ -1,25 +1,25 @@
 import Nombre from "./nombre.js"
 export default class Doctor{
     constructor({nombre, especialidad, telefono, cedula}){
-        this._nombres = nombre
-        this._especialidades = especialidad
-        this._telefonos = telefono
-        this._cedulas = cedula
+        this._nombre = nombre
+        this._especialidad = especialidad
+        this._telefono = telefono
+        this._cedula = cedula
     }
     getCedula(){
-        return this._cedulas
+        return this._cedula
     }
 
     getApellidoPaternoDoc(){
-        return this._nombres.getApellidoPaterno()
+        return this._nombre.getApellidoPaterno()
     }
 
     getPerfil(){
-        return `${this._cedulas}, ${this._especialidades}, Dr.${this._nombres.getApellidoPaterno()}, ${this._telefonos}`
+        return `${this._cedula}, ${this._especialidad}, Dr.${this._nombre.getApellidoPaterno()}, ${this._telefono}`
     }
 
     esIgualA(doctor){
-        if(doctor.getCedula() === this._cedulas){
+        if(doctor.getCedula() === this._cedula){
             return true
         }else{
             return false
